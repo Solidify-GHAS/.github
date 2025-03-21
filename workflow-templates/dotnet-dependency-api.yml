@@ -1,0 +1,11 @@
+name: Dotnet with SBOM generation and integration with GHAS dependency submission api
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+jobs:
+  UseReusable:
+    uses: Solidify-GHAS/.github-private/.github/workflows/dotnet-dependency-api.yml@main
